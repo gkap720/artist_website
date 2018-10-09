@@ -1,0 +1,24 @@
+{
+  "name": "webaudio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.329.0",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "http-auth": "^3.2.3",
+    "lodash": "^4.17.4",
+    "mongoose": "^5.2.17",
+    "node-dir": "^0.1.17",
+    "osc": "^2.2.0",
+    "socket.io": "^2.0.4",
+    "socket.io-client": "^2.0.3"
+  }
+}

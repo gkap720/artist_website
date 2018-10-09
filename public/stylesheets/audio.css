@@ -1,0 +1,28 @@
+
+div a {
+    color: white;
+}
+div a:hover {
+    color: yellow;
+    text-decoration: none;
+}
+.title {
+    text-align: left;
+}
+.row {
+    margin: 0;
+}
+
+@media (min-width: 320px) {
+    .col {
+        font-size: 24px;
+        height: 25%;
+    }
+}
+@media (min-width: 500px) {
+    .col {
+        font-size: 24px;
+        height: 25%;
+        text-shadow: 2px 2px 5px #000000;
+    }
+}

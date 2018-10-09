@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Signal Flow</title>
+        <link rel="stylesheet" 
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+        crossorigin="anonymous">
+        <script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|VT323" rel="stylesheet"> 
+        <link rel="stylesheet" href="/stylesheets/styles.css">
+        <script src="javascript/jquery-color.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+<body>
+    <div class="container" id="container-outer">
+        <div class="row">
+            <h1 class="yellow">pls don't(!) silence ur cellphone</h1>
+        </div>
+        <div class="row">
+            <p>hi! in this piece, you'll be asked to move around the room and
+            become part of a unique sonic experience :) <br><br> when you press the start button at the 
+            bottom of the screen, ur phone will start to make sound and your screen will change
+            color. <br><br> throughout the piece, follow the spheres with the same color as your phone
+            to where they are on the court. so if your phone is
+            <span class="red">red</span>, go to where the <span class="red">red</span> spheres are on the court. <br><br>when your screen 
+            flashes, that means it's time to look at the big projection to get your 
+            next instruction. <span class="yellow">TAKE YOUR TIME</span> moving between the different positions, pls keep 
+            talking to a minimum (thx!), 
+            and most importantly never forget to <span class="green">LISTEN ;)</span><br><br>
+            <span class="yellow">(if you can't get your phone to work, don't worry! just choose a 
+            color to follow at each step of the piece and move with those spheres! if your phone screen turns off
+            during the performance or if you exit your browser, you will probably need to restart the web page to get back in the game!)</span></p>
+        </div>
+        <div class="row text-center">
+            <button id="start" class="btn btn-lg btn-success">Start!!!</button>
+        </div>
+    </div>
+    <div class="container hidden" id="white">
+        <div class="row">
+            <p>point urself and ur phone to where the <span class="white_text">WHITE</span> side is pointing!!!</p>
+            <p class="hidden" id="gray">if your front is GRAY, sit down!</p>
+        </div>
+        
+    </div>
+    <div class="container hidden" id="thanks">
+        <h1>THANKS FOR COMING!!!</h1>
+    </div>
+<script type="text/javascript" src="/javascript/tests.js"></script>
+</body>
+
+</html>

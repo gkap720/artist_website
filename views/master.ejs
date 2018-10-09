@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>Master</title>
+    <link rel="stylesheet" 
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+    crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+    <script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    <style>
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Master control (Number of users: <span id="currentUsers">0</span>)</h1>
+      <label for="fundamental">Fundamental pitch:</label>
+      <input type="number" id="fundamental" class="form-control" value="220">
+      <div class="row">
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-default" id="3harm">3harm (<span>0</span>)</button>
+          <button type="button" class="btn btn-default" id="5harm">5harm (<span>0</span>)</button>
+          <button type="button" class="btn btn-default" id="7harm">7harm (<span>0</span>)</button>
+          <button type="button" class="btn btn-default" id="11harm">11harm (<span>0</span>)</button>
+          <button type="button" class="btn btn-default" id="1band">1band (<span>0</span>)</button>
+          <button type="button" class="btn btn-default" id="2band">2band (<span>0</span>)</button>
+          <button type="button" class="btn btn-default" id="3band">3band (<span>0</span>)</button>
+          <button type="button" class="btn btn-default" id="4band">4band (<span>0</span>)</button>
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-lg btn-primary" id="change">Change</button>
+        <button class="btn btn-lg btn-success" id="hide">Show dials/random button</button>
+        <button class="btn btn-lg btn-danger" id="mute">Mute all</button>
+        <button class="btn btn-lg btn-warning" id="add">Add Osc</button>
+        <button class="btn btn-lg btn-warning" id="flash">FLASH</button>
+      </div>
+      <div class="row" id="colors">
+        <button class="btn btn-lg btn-warning" id="back_button"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></button>
+        <span id="count">0</span>
+        <button class="btn btn-lg btn-info" id="forward_button"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></button>
+        <button class="btn btn-lg btn-danger" id="reset_button">RESET</button>
+      </div>
+    </div>
+    <script src="/javascript/master.js"></script>
+    
+  </body>
+</html>

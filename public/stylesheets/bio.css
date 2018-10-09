@@ -1,0 +1,18 @@
+#black_text {
+    color: black;
+    text-decoration: line-through;
+    position: absolute;
+    top: 10px;
+    display: none;
+}
+
+.row {
+    margin: 0;
+}
+
+#bio_text {
+    font-family: 'Inconsolata', monospace;
+    color: #bbb;
+    font-size: 1.4em;
+    line-height: 1.2;
+}

@@ -1,0 +1,22 @@
+h2+ul {
+    font-size: 1.2em;
+    font-family: "Inconsolata", monospace;
+    padding-left: 20px;
+    list-style-type: square;
+    color: #bbb;
+}
+.year {
+    color: #fff;
+    font-size: 27px;
+}
+.ed {
+    font-size: 1.2em;
+    font-family: "Inconsolata", monospace;
+    padding-left: 0;
+    color: #bbb;
+    margin-bottom: 10px;
+}
+.work_title {
+    font-weight: bold;
+    color: #ddd;
+}

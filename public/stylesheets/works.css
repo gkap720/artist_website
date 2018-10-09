@@ -1,0 +1,70 @@
+.img-responsive {
+    height: 70%;
+    width: 100%;
+    object-fit: cover;
+}
+.grid {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.col {
+    min-height: 250px;
+}
+.col:hover {
+    color: yellow;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+button.active {
+    background: black;
+    color: yellow;
+}
+button.focus {
+    
+}
+button.active:focus {
+    color: yellow;
+}
+button.active:hover {
+    color: red;
+    background: black;
+}
+.btn-group {
+    color: black;
+    background: white;
+}
+.btn:hover {
+    color: yellow;
+    background: black;
+}
+button {
+    color: black;
+    background: white;
+}
+#filters {
+    margin-bottom: 15px;
+}
+#yearCol {
+    padding: 0;
+}
+#filterCol {
+    padding: 0;
+}
+#tag_filter {
+    float: right;
+}
+#filterLabel {
+    pointer-events: none;
+}
+@media (min-width: 320px) {
+    #filters {
+        display: none;
+    }
+}
+@media (min-width: 500px) {
+    #filters {
+        display: block;
+    }
+}

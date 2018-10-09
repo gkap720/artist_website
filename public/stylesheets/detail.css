@@ -1,0 +1,57 @@
+.img-responsive {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.grid {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-bottom: 30px;
+}
+
+.doc {
+    padding-bottom: 30px;
+    padding-left: 0;
+}
+
+.info {
+    padding-top: 15px;
+}
+
+#text {
+    font-size: 1.4em;
+    font-family: 'Inconsolata', monospace;
+    line-height: 1.2;
+    text-align: justify;
+    color: #bbb;
+    white-space: pre-line;
+}
+
+.name {
+    font-size: 2.5em;
+}
+.gallery {
+    margin-bottom: 15px;
+}
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+}
+.video-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#gif {
+    max-height: 540;
+}
+@media (min-width:320px)  {
+    #text {
+        padding-left: 0;
+    }
+}

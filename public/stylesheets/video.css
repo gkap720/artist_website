@@ -1,0 +1,17 @@
+.col-lg-4 {
+    font-size: 36px;
+    height: 500px;
+}
+div a {
+    color: white;
+}
+div a:hover {
+    color: yellow;
+    text-decoration: none;
+}
+.title {
+    text-align: center;
+}
+.row {
+    margin: 0;
+}

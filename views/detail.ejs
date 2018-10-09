@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Greg Kappes</title>
+        <link rel="stylesheet" 
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+        crossorigin="anonymous">
+        <script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|VT323" rel="stylesheet"> 
+        <link rel="stylesheet" href="/stylesheets/index.css">
+        <link rel="stylesheet" href="/stylesheets/audio.css">
+        <link rel="stylesheet" href="/stylesheets/detail.css">
+        <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet"> 
+        <script src="javascript/jquery-color.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+    </head>
+
+<body>
+<% include ./partials/navbar %>
+<div class="name"><%= page.name %></div>
+<div class="row info">
+    <% if (page.video != undefined) {%>
+    <div class="col-lg-8 doc">
+        <div class="video-container">
+            <iframe width="960" height="540" frameborder="0" allowfullscreen
+                src="<%= page.video %>">
+            </iframe>
+        </div>
+    </div>
+    <div class="col-lg-4" id="text">
+        <%= page.description %>
+    </div>
+    <% } else if(page.sound != undefined) {%>
+    <div class="col-lg-8 doc">
+        <iframe width="100%" height="120" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=<%= page.sound %>&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+    </div>
+    <div class="col-lg-4" id="text">
+        <%= page.description %>
+    </div>
+    <% } else if(page.profile != undefined){ %>
+    <div class="col-lg-8 doc">
+        <img src="<%= page.profile %>" class="img-responsive" id="gif">
+    </div>
+    <div class="col-lg-4" id="text">
+        <%= page.description %>
+    </div>
+    <% } else {%>
+    <div class="col-lg-12" id="text">
+        <%= page.description %>
+    </div>
+    <% } %>
+</div>
+<% if(images.length > 1) { %>
+<hr>
+<div class="grid">
+    <div class="row">
+        <% images.forEach(function(image) { %>
+        <div class="col col-lg-4 col-md-4 col-sm-6 gallery">
+            <a href="<%= image %>"><img src="<%= image %>" class="img-responsive"></a>
+        </div>
+        <% }); %>
+    </div>
+</div>
+<% } %>
+</div>
+</body>
+</html>

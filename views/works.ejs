@@ -1,0 +1,71 @@
+<html ng-app="works">
+    <head>
+        <title>Greg Kappes</title>
+        <link rel="stylesheet" 
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+        crossorigin="anonymous">
+        <script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|VT323" rel="stylesheet"> 
+        <link rel="stylesheet" href="/stylesheets/index.css">
+        <link rel="stylesheet" href="/stylesheets/audio.css">
+        <link rel="stylesheet" href="/stylesheets/works.css">
+        <script src="javascript/jquery-color.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
+        <script src="../javascript/works.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+<body ng-controller="mainController">
+<% include ./partials/navbar %>
+<div class="row" id="filters">
+    <div class="col-lg-3" id="yearCol">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Sort by year
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <div id="year_filter" class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-secondary" ng-click="change($event)">2018</button>
+              <button type="button" class="btn btn-secondary" ng-click="change($event)">2017</button>
+              <button type="button" class="btn btn-secondary" ng-click="change($event)">2016</button>
+              <button type="button" class="btn btn-secondary" ng-click="change($event)">2015</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="col-lg-9" id="filterCol">
+        
+        <div id="tag_filter" class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary" id="filterLabel">Filter by: </button>
+          <button type="button" class="btn btn-secondary" ng-click="change($event)">sound</button>
+          <button type="button" class="btn btn-secondary" ng-click="change($event)">installation</button>
+          <button type="button" class="btn btn-secondary" ng-click="change($event)">video</button>
+          <button type="button" class="btn btn-secondary" ng-click="change($event)">performance</button>
+          <button type="button" class="btn btn-secondary" ng-click="change($event)">projection</button>
+        </div>
+    </div>
+</div>
+<div class="grid">
+    <div class="row">
+        <div ng-view class="col col-lg-3 col-md-4 col-sm-6" ng-repeat="page in pages">
+            <a href="/works/{{page._id}}">
+            <img src="{{ page.thumbnail }}" class="img-responsive" id="{{ page.color }}">
+            <div class="title">
+                {{ page.name + ", " + page.year}}
+            </div>
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>
